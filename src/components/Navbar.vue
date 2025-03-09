@@ -1,5 +1,6 @@
 <template>
     <nav class="bg-white border-b">
+      <!-- Top Section -->
       <div class="container mx-auto flex justify-between items-center py-4 px-6">
         <!-- Logo -->
         <div class="text-2xl font-bold flex items-center">
@@ -7,7 +8,7 @@
           <span class="ml-1">bari™</span>
         </div>
   
-        <!-- Search and Icons -->
+        <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-6">
           <a href="#" class="text-gray-600">Outlets</a>
           <div class="relative">
@@ -41,10 +42,24 @@
             <a href="#" class="text-gray-600">Sign In</a>
           </div>
         </div>
+  
+        <!-- Mobile Menu Button -->
+        <button @click="toggleMenu" class="md:hidden text-gray-700 focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
       </div>
   
-      <!-- Navbar Links -->
-      <div class="bg-black text-white py-3">
+      <!-- Navbar Links (Desktop) -->
+      <div class="bg-black text-white py-3 hidden md:block">
         <div class="container mx-auto flex justify-center space-x-6 text-sm font-semibold">
           <a href="#" class="hover:text-gray-300">HOME</a>
           <a href="#" class="hover:text-gray-300 flex items-center">
@@ -60,16 +75,59 @@
           <a href="#" class="hover:text-gray-300">CONTACT US</a>
         </div>
       </div>
+  
+      <!-- Mobile Menu -->
+      <div
+        v-if="menuOpen"
+        class="md:hidden bg-black text-white py-4 absolute top-16 left-0 w-full"
+      >
+        <div class="flex flex-col space-y-4 text-center">
+          <a href="#" class="hover:text-gray-300">HOME</a>
+          <a href="#" class="hover:text-gray-300">EID COLLECTION 2025 🌙✨</a>
+          <a href="#" class="hover:text-gray-300">MEN TOP</a>
+          <a href="#" class="hover:text-gray-300">MEN BOTTOM</a>
+          <a href="#" class="hover:text-gray-300">OUTERWEAR</a>
+          <a href="#" class="hover:text-gray-300">FRAGRANCE 20% OFF</a>
+          <a href="#" class="hover:text-gray-300">ACCESSORIES</a>
+          <a href="#" class="hover:text-gray-300">BIG SAVING</a>
+          <a href="#" class="hover:text-gray-300">CONTACT US</a>
+        </div>
+      </div>
     </nav>
   </template>
   
   <script>
   export default {
-    name: "Navbar",
+    data() {
+      return {
+        menuOpen: false,
+      };
+    },
+    methods: {
+      toggleMenu() {
+        this.menuOpen = !this.menuOpen;
+      },
+    },
   };
   </script>
   
   <style scoped>
-  /* Optional additional styles */
+  /* Smooth dropdown animation */
+  @media (max-width: 768px) {
+    div[ v-if="menuOpen"] {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   </style>
   
