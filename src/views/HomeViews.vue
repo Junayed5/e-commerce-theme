@@ -57,7 +57,7 @@
   </div>
   <!-- slider -->
   <!--Category  -->
-  <div class="w-3/5 mx-auto gap-7 my-10 grid grid-cols-1 md:grid-cols-4">
+  <div class="w-full md:w-3/5 mx-auto gap-7 my-10 grid grid-cols-2     md:grid-cols-4">
     <img
       class="transition duration-700 ease-in"
       src="https://dorjibari.com.bd/cdn/shop/files/Dorjibari___Panjabi_Image_500px_X_400px_1370x.png?v=1722687206"
@@ -77,6 +77,30 @@
     />
   </div>
   <!--Category  -->
+  <!-- new arrival -->
+  <div class="w-full md:w-3/5 mx-auto">
+    <div class="flex justify-between items-center mt-7 mb-3">
+      <hr class="border-2 w-4/12" />
+      <h3 class="text-sm md:text-xl font-semibold uppercase">New Arrival</h3>
+      <hr class="border-2 w-4/12" />
+    </div>
+    <div>
+      <p class="flex justify-center underline text-sm font-semibold">
+        View All
+      </p>
+    </div>
+  </div>
+  <div class="w-full md:w-3/5 mx-auto my-10 grid grid-cols-2 md:grid-cols-4">
+    <div v-for="(product, index) in products" :key="index" class="">
+      <div>
+        <img :src="product.image" :alt="product.title" />
+        <p class="text-center text-sm py-1">{{ product.title }}</p>
+        <p class="text-center font-semibold py-2">TK.{{ product.price }}.00</p>
+      </div>
+    </div>
+  </div>
+  <button>Show More</button>
+  <!-- new arrival -->
 </template>
 <script>
 export default {
@@ -99,6 +123,40 @@ export default {
           image: "https://source.unsplash.com/1600x900/?outfit,shopping",
           title: "Limited Time Offers",
           subtitle: "Get amazing discounts on selected items this season.",
+        },
+      ],
+      products: [
+        {
+          image:
+            "https://dorjibari.com.bd/cdn/shop/files/1_4725c873-27d1-448a-bfe9-fe4e9fc00e14.jpg?v=1741153209",
+          hoverImage:
+            "https://dorjibari.com.bd/cdn/shop/files/2_74d40ec0-a31f-4995-887a-06b7b1efd8f5.jpg?v=1741153209",
+          title: "Panjabi:Semi Fit_Fil-a-Fil_329#4",
+          price: "2,490",
+        },
+        {
+          image:
+            "https://dorjibari.com.bd/cdn/shop/files/1_4725c873-27d1-448a-bfe9-fe4e9fc00e14.jpg?v=1741153209",
+          hoverImage:
+            "https://dorjibari.com.bd/cdn/shop/files/2_74d40ec0-a31f-4995-887a-06b7b1efd8f5.jpg?v=1741153209",
+          title: "Panjabi:Semi Fit_Fil-a-Fil_329#4",
+          price: "2,490",
+        },
+        {
+          image:
+            "https://dorjibari.com.bd/cdn/shop/files/1_4725c873-27d1-448a-bfe9-fe4e9fc00e14.jpg?v=1741153209",
+          hoverImage:
+            "https://dorjibari.com.bd/cdn/shop/files/2_74d40ec0-a31f-4995-887a-06b7b1efd8f5.jpg?v=1741153209",
+          title: "Panjabi:Semi Fit_Fil-a-Fil_329#4",
+          price: "2,490",
+        },
+        {
+          image:
+            "https://dorjibari.com.bd/cdn/shop/files/1_4725c873-27d1-448a-bfe9-fe4e9fc00e14.jpg?v=1741153209",
+          hoverImage:
+            "https://dorjibari.com.bd/cdn/shop/files/2_74d40ec0-a31f-4995-887a-06b7b1efd8f5.jpg?v=1741153209",
+          title: "Panjabi:Semi Fit_Fil-a-Fil_329#4",
+          price: "2,490",
         },
       ],
     };
