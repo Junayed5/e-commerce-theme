@@ -57,7 +57,9 @@
   </div>
   <!-- slider -->
   <!--Category  -->
-  <div class="w-full md:w-3/5 mx-auto gap-7 my-10 grid grid-cols-2     md:grid-cols-4">
+  <div
+    class="w-full md:w-3/5 mx-auto gap-7 my-10 grid grid-cols-2 md:grid-cols-4"
+  >
     <img
       class="transition duration-700 ease-in"
       src="https://dorjibari.com.bd/cdn/shop/files/Dorjibari___Panjabi_Image_500px_X_400px_1370x.png?v=1722687206"
@@ -78,29 +80,53 @@
   </div>
   <!--Category  -->
   <!-- new arrival -->
-  <div class="w-full md:w-3/5 mx-auto">
-    <div class="flex justify-between items-center mt-7 mb-3">
-      <hr class="border-2 w-4/12" />
-      <h3 class="text-sm md:text-xl font-semibold uppercase">New Arrival</h3>
-      <hr class="border-2 w-4/12" />
-    </div>
-    <div>
-      <p class="flex justify-center underline text-sm font-semibold">
-        View All
-      </p>
-    </div>
-  </div>
-  <div class="w-full md:w-3/5 mx-auto my-10 grid grid-cols-2 md:grid-cols-4">
-    <div v-for="(product, index) in products" :key="index" class="">
+  <div>
+    <div class="w-full md:w-3/5 mx-auto">
+      <div class="flex justify-between items-center mt-7 mb-3">
+        <hr class="border-1 w-4/12" />
+        <h3 class="text-sm md:text-xl font-semibold uppercase">New Arrival</h3>
+        <hr class="border-1 w-4/12" />
+      </div>
       <div>
-        <img :src="product.image" :alt="product.title" />
-        <p class="text-center text-sm py-1">{{ product.title }}</p>
-        <p class="text-center font-semibold py-2">TK.{{ product.price }}.00</p>
+        <p class="flex justify-center underline text-sm font-semibold">
+          View All
+        </p>
       </div>
     </div>
+    <div class="w-full md:w-3/5 mx-auto my-10 grid grid-cols-2 md:grid-cols-4">
+      <div v-for="(product, index) in products" :key="index" class="">
+        <div>
+          <img :src="product.image" :alt="product.title" />
+          <p class="text-center text-sm py-1">{{ product.title }}</p>
+          <p class="text-center font-semibold py-2">
+            TK.{{ product.price }}.00
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center my-10">
+      <button class="h-12 w-60 font-semibold bg-gray-800 text-white uppercase">
+        Show More
+      </button>
+    </div>
   </div>
-  <button>Show More</button>
   <!-- new arrival -->
+  <!-- hero -->
+  <div
+    class="bg-[url('https://dorjibari.com.bd/cdn/shop/files/photo-3.jpg?v=1720339843&width=2000')] bg-center bg-cover bg-no-repeat relative h-screen"
+  >
+    <div class="w-[400px] text-white absolute top-60 left-96">
+      <h3 class="text-4xl font-semibold uppercase">Premium Panjabi <br> Collection</h3>
+      <p class="text-xl my-7">
+        Discover elegance with Dorjibari's Premium Panjabi Collection. Crafted
+        with fine fabrics and intricate designs for ultimate comfort and style.
+      </p>
+      <button class="h-12 w-60 font-semibold bg-gray-800 text-white uppercase">
+        Shop now
+      </button>
+    </div>
+  </div>
+  <!-- hero -->
 </template>
 <script>
 export default {
