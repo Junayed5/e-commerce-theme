@@ -116,7 +116,10 @@
     class="bg-[url('https://dorjibari.com.bd/cdn/shop/files/photo-3.jpg?v=1720339843&width=2000')] bg-center bg-cover bg-no-repeat relative h-screen"
   >
     <div class="w-[400px] text-white absolute top-72 left-96">
-      <h3 class="text-4xl font-semibold uppercase">Premium Panjabi <br> Collection</h3>
+      <h3 class="text-4xl font-semibold uppercase">
+        Premium Panjabi <br />
+        Collection
+      </h3>
       <p class="text-xl my-7">
         Discover elegance with Dorjibari's Premium Panjabi Collection. Crafted
         with fine fabrics and intricate designs for ultimate comfort and style.
@@ -128,12 +131,14 @@
   </div>
   <!-- hero -->
 
-   <!-- featured -->
-   <div>
+  <!-- featured -->
+  <div>
     <div class="w-full md:w-3/5 mx-auto">
       <div class="flex justify-between items-center mt-7 mb-3">
         <hr class="border-1 w-4/12" />
-        <h3 class="text-sm md:text-xl font-semibold uppercase">Featured Products</h3>
+        <h3 class="text-sm md:text-xl font-semibold uppercase">
+          Featured Products
+        </h3>
         <hr class="border-1 w-4/12" />
       </div>
       <div>
@@ -154,8 +159,11 @@
       </div>
     </div>
   </div>
-   <!-- featured -->
-    <img src="https://dorjibari.com.bd/cdn/shop/files/Dorjibari-Website-Banner-3-Fial.png?v=1723632714&width=2000" alt="">
+  <!-- featured -->
+  <img
+    src="https://dorjibari.com.bd/cdn/shop/files/Dorjibari-Website-Banner-3-Fial.png?v=1723632714&width=2000"
+    alt=""
+  />
 </template>
 <script>
 export default {
