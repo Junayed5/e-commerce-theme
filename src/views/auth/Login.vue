@@ -30,7 +30,7 @@
   
           <!-- Login Button -->
           <button type="submit"
-            class="w-full bg-yellow-500 text-white py-3 rounded-lg font-bold hover:bg-yellow-600 transition">
+            class="w-full bg-black text-white py-3 rounded-lg font-bold hover:bg-yellow-600 transition">
             Login
           </button>
         </form>
@@ -38,7 +38,7 @@
         <!-- Register Link -->
         <p class="mt-4 text-center text-gray-600">
           Don't have an account?
-          <a href="#" class="text-yellow-500 font-medium hover:text-yellow-600">Sign Up</a>
+          <a href="#" class="text-black font-medium hover:text-yellow-600">Sign Up</a>
         </p>
       </div>
     </div>
