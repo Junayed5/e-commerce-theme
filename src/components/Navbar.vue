@@ -73,10 +73,10 @@
         class="container mx-auto flex justify-center space-x-6 text-sm font-semibold"
       >
         <a href="#" class="hover:text-gray-300">HOME</a>
-        <a href="#" class="hover:text-gray-300 flex items-center">
+        <RouterLink to="/collections" class="hover:text-gray-300 flex items-center">
           EID COLLECTION 2025
           <span class="ml-1">🌙✨</span>
-        </a>
+        </RouterLink>
         <a href="#" class="hover:text-gray-300">MEN TOP</a>
         <a href="#" class="hover:text-gray-300">MEN BOTTOM</a>
         <a href="#" class="hover:text-gray-300">OUTERWEAR</a>
