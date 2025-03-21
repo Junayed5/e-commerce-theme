@@ -33,7 +33,7 @@
           </svg>
         </div>
         <div class="flex space-x-4">
-          <a href="#" class="relative text-gray-600">
+          <a href="#" @click="toggleCart" class="relative text-gray-600">
             Shopping Cart
             <span
               class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1"
@@ -73,11 +73,14 @@
         class="container mx-auto flex justify-center space-x-6 text-sm font-semibold"
       >
         <a href="#" class="hover:text-gray-300">HOME</a>
-        <RouterLink to="/collections" class="hover:text-gray-300 flex items-center">
+        <RouterLink
+          to="/collections"
+          class="hover:text-gray-300 flex items-center"
+        >
           EID COLLECTION 2025
           <span class="ml-1">🌙✨</span>
         </RouterLink>
-        <a href="#" class="hover:text-gray-300">MEN TOP</a>
+        <router-link to="/product/details" class="hover:text-gray-300">MEN TOP</router-link>
         <a href="#" class="hover:text-gray-300">MEN BOTTOM</a>
         <a href="#" class="hover:text-gray-300">OUTERWEAR</a>
         <a href="#" class="hover:text-gray-300">FRAGRANCE 20% OFF</a>
@@ -119,6 +122,9 @@ export default {
   methods: {
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
+    },
+    toggleCart() {
+      
     },
   },
 };

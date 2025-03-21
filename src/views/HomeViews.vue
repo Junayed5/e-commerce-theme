@@ -164,8 +164,12 @@
     src="https://dorjibari.com.bd/cdn/shop/files/Dorjibari-Website-Banner-3-Fial.png?v=1723632714&width=2000"
     alt=""
   />
+
+  
 </template>
 <script>
+
+
 export default {
   data() {
     return {
@@ -237,6 +241,12 @@ export default {
         this.nextSlide();
       }, 5000); // Auto-slide every 5 seconds
     },
+    toggleCart() {
+      this.isOpen = !this.isOpen;
+    },
+    removeItem(index) {
+      this.cartItems.splice(index, 1);
+    },
   },
   mounted() {
     this.autoSlide();
@@ -247,5 +257,9 @@ export default {
 /* Smooth transition for slide effect */
 .transition-transform {
   transition: transform 0.7s ease-in-out;
+}
+
+.transition-transform-cart {
+  transition: transform 0.3s ease-in-out;
 }
 </style>
