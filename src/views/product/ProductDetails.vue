@@ -4,7 +4,7 @@
       <div>
         <img class="size-[671px]" :src="product.image" alt="" />
       </div>
-      <div class="">
+      <div class="mx-14">
         <div>
           <h3 class="text-xl font-semibold">{{ product.name }}</h3>
           <p class="text-xl font-semibold">Tk {{ product.price }}.00</p>
@@ -15,19 +15,36 @@
               Out Of Stock
             </p>
           </div>
-          <p class="text-sm font-semibold">Size: M</p>
+          <div>
+            <p class="text-sm font-semibold">Size: M</p>
+            <div class="flex gap-2">
+              <div v-for="size in product.size">
+                <button class="border size-10">{{ size }}</button>
+              </div>
+            </div>
+          </div>
 
           <p class="text-sm">Subtotal: TK 2990.0</p>
           <p class="text-sm font-semibold">Quantity:</p>
           <div class="flex items-center gap-5">
             <div class="flex gap-7 border items-center h-12 my-3 px-2">
-               <button class="text-3xl cursor-pointer" @click="decreaseQuantity">-</button> 
-               <p>{{ product.quantity <= 0 ? 1 : product.quantity}}</p>
-               <button class="text-3xl cursor-pointer" @click="increaseQuantity">+</button>
+              <button class="text-3xl cursor-pointer" @click="decreaseQuantity">
+                -
+              </button>
+              <p>{{ product.quantity <= 0 ? 1 : product.quantity }}</p>
+              <button class="text-3xl cursor-pointer" @click="increaseQuantity">
+                +
+              </button>
             </div>
-            <button class="uppercase font-semibold border h-12 px-10 hover:bg-black hover:text-white transform delay-100">Add To Cart</button>
-            <button>Love</button>
-            <button>Share</button>
+            <button
+              class="uppercase font-semibold border h-12 px-10 hover:bg-black hover:text-white transform delay-100"
+            >
+              Add To Cart
+            </button>
+            <button class="">
+              <i class="pi pi-heart size-10 border rounded-full"></i>
+            </button>
+            <button><i class="pi pi-share-alt"></i></button>
           </div>
 
           <button
@@ -41,6 +58,8 @@
   </div>
 </template>
 <script>
+import "primeicons/primeicons.css";
+
 export default {
   data() {
     return {
@@ -53,18 +72,18 @@ export default {
         showImage: [],
         stock: 8,
         inStock: this.stock >= 0 ? true : false,
-        quantity: 1
+        quantity: 1,
       },
     };
   },
 
   methods: {
-    increaseQuantity (){
-        this.product.quantity ++
+    increaseQuantity() {
+      this.product.quantity++;
     },
-    decreaseQuantity (){
-        this.product.quantity --
-    }
-  }
+    decreaseQuantity() {
+      this.product.quantity--;
+    },
+  },
 };
 </script>
