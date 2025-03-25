@@ -64,14 +64,14 @@
     </div>
     <div>
       <div class="flex gap-5 justify-center">
-        <h3
-          @click="handleDescription"
+        <button
+          @click="handleDescription(1)"
           class="text-2xl font-semibold flex justify-center underline"
         >
           Description
-        </h3>
+        </button>
         <h3
-          @click="handlePolicy"
+          @click="handleDescription(2)"
           class="text-2xl font-semibold flex justify-center underline"
         >
           Shopping Policy
@@ -115,9 +115,9 @@
 </template>
 <script>
 import "primeicons/primeicons.css";
+let toggle = true;
 
 export default {
-  
   data() {
     return {
       product: {
@@ -150,9 +150,14 @@ export default {
     decreaseQuantity() {
       this.product.quantity--;
     },
-    handleDescription() {
-      
-    }
+    // handleDescription(toggle) {
+    //   if (toggle === 1) {
+    //     return (className = "block");
+    //   }
+    //   if (toggle === 2) {
+    //     return className = ""
+    //   }
+    // },
   },
 };
 </script>
